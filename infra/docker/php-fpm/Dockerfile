@@ -16,6 +16,7 @@ RUN apk update && \
     freetype-dev \
     libmcrypt-dev \
     curl \
+    git \
     mysql-client
 
 # Install and configure extentions
