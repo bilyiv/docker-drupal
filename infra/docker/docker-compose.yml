@@ -1,0 +1,44 @@
+version: "2"
+services:
+   basecode:
+      build:
+         dockerfile: infra/docker/basecode/Dockerfile
+         context: ../../
+      #if you want to sync your local code with the code in docker, please uncomment this
+      #volumes:
+      #   - "../../src:/var/www/example"
+   nginx:
+      build:
+         dockerfile: infra/docker/nginx/Dockerfile
+         context: ../../
+      ports:
+         - "80:80"
+         - "4000:4000"
+      links:
+         - php-fpm:php-fpm
+      volumes_from:
+         - basecode
+      restart: always
+   php-fpm:
+      build:
+         dockerfile: infra/docker/php-fpm/Dockerfile
+         context: ../../
+      links:
+         - mariadb:mariadb
+      volumes_from:
+         - basecode
+      restart: always
+   mariadb:
+      build:
+         dockerfile: infra/docker/mariadb/Dockerfile
+         context: ../../
+      environment:
+         MYSQL_ROOT_PASSWORD: secret
+         MYSQL_DATABASE: example
+      restart: always
+   mailhog:
+      image: mailhog/mailhog
+      ports:
+         - "1025:1025"
+         - "8025:8025"
+
