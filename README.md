@@ -5,9 +5,10 @@ The docker structure for drupal 8 projects.
 ## Getting started
 
 Put your Drupal site to src directory then just run command `sh run.sh reset` then you will have installed drupal
-website available on localhost with the admin/secret credentials. Also you will have the mailhog which catch up all
-emails from this site available on localhost:8025.
+website available on [localhost](http://localhost) with the *admin*/*secret* credentials. Also you will have the mailhog which catch up all
+emails from this site available on [localhost:8025](http://localhost:8025).
 
+**Be careful**, the `sh run.sh reset` command will remove all data such as database data.
 
 There are available commands:
 
