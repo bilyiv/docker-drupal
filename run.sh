@@ -26,7 +26,7 @@ if [ "$1" = "up" ]; then
     docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm composer install --prefer-source --no-interaction
 
     echo "Installing drupal"
-    docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web si minimal --account-name=admin --account-pass=secret --db-url=mysql://root:secret@mariadb:3306/lit --y
+    docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web si minimal --account-name=admin --account-pass=secret --db-url=mysql://root:secret@mariadb:3306/example --y
     docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web config-set "system.site" uuid "860e0c08-e205-49b7-947f-962b639baf33" --y
     docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web config-import --y
 
@@ -66,7 +66,7 @@ if [ "$1" = "reset" ]; then
     docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm composer install --prefer-source --no-interaction
 
     echo "Installing drupal"
-    docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web si minimal --account-name=admin --account-pass=secret --db-url=mysql://root:secret@mariadb:3306/lit --y
+    docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web si minimal --account-name=admin --account-pass=secret --db-url=mysql://root:secret@mariadb:3306/example --y
     docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web config-set "system.site" uuid "860e0c08-e205-49b7-947f-962b639baf33" --y
     docker-compose -f ./infra/docker/docker-compose.yml exec -d php-fpm vendor/bin/drush --root=web config-import --y
 
