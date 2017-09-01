@@ -1,15 +1,21 @@
 # Docker Drupal
 
-The docker structure for drupal 8 projects.
+The docker infrastructure for drupal 8 projects.
 
 ## Getting started
 
-Put your Drupal site to src directory. Add drush by `composer require drush/drush` then just run command
-`sh run.sh reset` then you will have installed drupal website available on [localhost](http://localhost)
-with the *admin*/*secret* credentials. Also you will have the mailhog which catch up all
-emails from this site available on [localhost:8025](http://localhost:8025).
+Create the Drupal project via composer under `src` directory:
+```
+composer create-project drupal-composer/drupal-project:8.x-dev src --stability dev --no-interaction
+```
+Read about [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project)
 
-**Be careful**, the `sh run.sh reset` command will remove all data such as database data.
+
+Run the command `sh run.sh reset` then you will have completely installed drupal website available on [localhost](http://localhost)
+with the *admin*/*secret* credentials. Also, you will have the mailhog available on [localhost:8025](http://localhost:8025),
+which catches up all emails from the site.
+
+**Be careful**, the `sh run.sh reset` command will remove database data each time.
 
 There are available commands:
 
