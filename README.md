@@ -11,7 +11,7 @@ composer create-project drupal-composer/drupal-project:8.x-dev src --stability d
 Read about [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project)
 
 
-Run the command `sh run.sh reset` then you will have completely installed drupal website available on [localhost](http://localhost)
+Run the command `sh run.sh reset` then you will have completely installed drupal website available on [localhost:8080](http://localhost:8080)
 with the *admin*/*secret* credentials. Also, you will have the mailhog available on [localhost:8025](http://localhost:8025),
 which catches up all emails from the site.
 

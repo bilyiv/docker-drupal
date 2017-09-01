@@ -12,8 +12,7 @@ services:
          dockerfile: infra/docker/nginx/Dockerfile
          context: ../../
       ports:
-         - "80:80"
-         - "4000:4000"
+         - "8080:80"
       links:
          - php-fpm:php-fpm
       volumes_from:
