@@ -1,4 +1,4 @@
-FROM nginx:1.13.2-alpine
+FROM nginx:1.13.3-alpine
 
 MAINTAINER Vladyslav Bilyi <beliyvladislav@gmail.com>
 

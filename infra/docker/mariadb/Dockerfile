@@ -1,4 +1,4 @@
-FROM mariadb:10.3.0
+FROM mariadb:10.3.1
 
 MAINTAINER Vladyslav Bilyi <beliyvladislav@gmail.com>
 
