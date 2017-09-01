@@ -1,6 +1,6 @@
 FROM busybox:latest
 
-MAINTAINER Vladyslav Bilyi <vladyslav.bilyi@rolique.io>
+MAINTAINER Vladyslav Bilyi <beliyvladislav@gmail.com>
 
 COPY ./src /var/www/example
 

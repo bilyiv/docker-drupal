@@ -1,6 +1,6 @@
 FROM nginx:1.13.2-alpine
 
-MAINTAINER Vladyslav Bilyi <vladyslav.bilyi@rolique.io>
+MAINTAINER Vladyslav Bilyi <beliyvladislav@gmail.com>
 
 WORKDIR /var/www/example/web
 

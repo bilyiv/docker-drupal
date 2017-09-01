@@ -1,6 +1,6 @@
 FROM php:7.1.6-fpm-alpine
 
-MAINTAINER Vladyslav Bilyi <vladyslav.bilyi@rolique.io>
+MAINTAINER Vladyslav Bilyi <beliyvladislav@gmail.com>
 
 WORKDIR /var/www/example
 
